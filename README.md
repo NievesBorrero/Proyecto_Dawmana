@@ -54,15 +54,6 @@ Cada ponente registrará su actividad. Para ello ha de rellenar los siguientes d
     Material requerido para los asistentes: Equipo, Windows/Linux, Eclipse, Navegador, Editor de textos...
     Número de asistentes recomendados
 
-Contenidos
-Material que debes introducir:
-
-    Sysmana-X
-    Teamup Sysmana2018
-    Inscripción en I Concurso Twitter Sysmana IES Gran Capitán
-    Clasificación I Concurso Twitter Sysmana IES Gran Capitán
-     
-
 Elementos obligatorios:
 
     De jQueryUI usar un único tema. El diseño de la página ha de ser homogéneo

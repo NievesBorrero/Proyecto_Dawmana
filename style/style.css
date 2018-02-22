@@ -52,8 +52,76 @@ section {
     height: auto;
     display: block; }
 
+form {
+  padding: 0px 20px 10px;
+  background: #fff;
+  box-shadow: 0px 0px 3px gray;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  width: 70%; }
+  form input[type="text"], form input[type="email"] {
+    width: 60%;
+    text-align: center;
+    outline: none;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    display: block; }
+    form input[type="text"]:focus, form input[type="email"]:focus {
+      border-bottom: 3px solid #3F51B5; }
+  form button {
+    padding: 5px 20px;
+    color: #3F51B5;
+    margin: 0 auto;
+    display: block; }
+    form button:hover {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+      background-color: #3F51B5;
+      color: #FFF; }
+  form div {
+    margin: 0 auto; }
+  form label {
+    color: #3F51B5;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; }
+  form h4 {
+    background-color: #3F51B5;
+    color: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 40px; }
+
+.input-group {
+  line-height: 0px;
+  margin-bottom: 40px; }
+
 footer {
   background-color: #3F51B5;
-  color: #FFF; }
+  color: #FFF;
+  padding: 20px; }
+  footer p:last-child {
+    text-align: center;
+    margin-top: 50px; }
+
+#patrocinios {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; }
+  #patrocinios .cuad {
+    width: 100px;
+    height: 100px; }
+  #patrocinios .rect {
+    width: 220px;
+    height: 100px; }
 
 /*# sourceMappingURL=style.css.map */
