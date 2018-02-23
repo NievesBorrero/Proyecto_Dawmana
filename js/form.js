@@ -2,7 +2,7 @@
  * Funcionalidad de formularios.
  * @author: Nieves Borrero
  */
-
+{
 /*--------------------------------------------CAPA DE NEGOCIO---------------------------------------------*/
 	/**
 	 * Objeto tester
@@ -318,3 +318,5 @@
 	}
 
 	$().ready(init);
+
+}
