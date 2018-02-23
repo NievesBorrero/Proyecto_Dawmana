@@ -13,6 +13,9 @@
 				break;
 			case 'registro':				
 				$content = '<head><script src="./js/form.js" type="text/javascript" charset="utf-8"></script></head>
+							<div id="dialog" title="Registro">
+  							<p> Enhorabuena ¡Ya estás registrado para asistir a la Dawmana!</p></div>
+							</div>
 							<div class="card"><form id="formRegister"><h4>Registro</h4>
 							<div class="input-group"><label>Nombre</label>
 							<input type="text" name="" id="name"><span id="errNombre"></span></div>
@@ -27,7 +30,7 @@
 							<div class="input-group"><label>Procedencia</label>
 							<input type="text" placeholder="IES, universidad, empresa..." id="location"><span id="errLocation"></span></div>
 							<button>Enviar</button>
-							</form></div>';
+							</form>';
 				break;
 			case 'login':				
 				$content = '<div class="card">login</div>';

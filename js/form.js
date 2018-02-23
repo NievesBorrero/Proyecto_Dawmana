@@ -81,7 +81,7 @@
 			 * @return     {boolean} true o false
 			 */
 			let testCoinciden = function (texto,texto2){
-				return (texto == texto2)
+				return (texto == texto2);
 			}
 			/**
 			 * Comprueba que la fecha introducida coincida con el patrón
@@ -172,7 +172,7 @@
 	})();
 
 /*--------------------------------------------CAPA DE PRESENTACIÓN---------------------------------------------*/
-	
+	let $dialog;
 	// inputs
 	let $nombre;
 	let $apellido;
@@ -244,7 +244,6 @@
 	let comprobarProcedencia = function(cadena){
 		$spanLocation.html(tester.testProcedencia(cadena));
 	}
-
 	/**
 	 * Comprueba si hay errores
 	 *
@@ -252,13 +251,35 @@
 	 */
 	let hayError = () => {
 		let error = false;
-		$('span').each(function(){
+		$('form span').each(function(){
 			if($(this).html() != ""){
 				error = true;
 			}
 		});
 		return error;
 	}
+	/**
+	* Limpia los inputs
+	*/
+	let limpiar = function(){
+		$('input').each(function(){
+			$(this).val("");
+		});
+	}
+	/**
+     * Abre un diálogo
+     */
+    let openDialog = function(){
+        $dialog.dialog("open");
+            $dialog.dialog({
+      			modal: true,
+    			buttons: {
+        			Ok: function() {
+          				$( this ).dialog( "close" );
+       				 }
+      			}
+   			 });
+    }   
 
 	/**
 	* Comprueba todos los inputs del formulario
@@ -269,10 +290,11 @@
 		comprobarApellidos(extractValue($apellido));
 		comprobarDni(extractValue($dni));
 		comprobarEmail(extractValue($email));
-		comprobarOtroEmail(extractValue($otroEmail));
+		comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
 		comprobarProcedencia(extractValue($procedencia));		
-		if(hayError()){
-			console.log('errores');
+		if(!hayError()){
+			limpiar();
+			openDialog();
 		}
 	}
 
@@ -280,8 +302,10 @@
 	 * Inicializa las variables y el comportamiento
 	 */
 	let init = function(){
-		// Inicializamos los span
 		let $btnEnviar = $("button");
+		$dialog = $("#dialog").dialog({autoOpen: false});	
+
+		// Inicializamos los span
 		$spanNombre = $("#errNombre");
 		$spanApellido = $("#errApellido");
 		$spanDni = $("#errDni");
