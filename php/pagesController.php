@@ -12,19 +12,20 @@
 				$content = '<div class="card">Imagenes</div>';
 				break;
 			case 'registro':				
-				$content = '<div class="card"><form id="formRegister"><h4>Registro</h4>
+				$content = '<head><script src="./js/form.js" type="text/javascript" charset="utf-8"></script></head>
+							<div class="card"><form id="formRegister"><h4>Registro</h4>
 							<div class="input-group"><label>Nombre</label>
-							<input type="text" name="" id="name" pattern=".{3,}"></div>
+							<input type="text" name="" id="name"><span id="errNombre"></span></div>
 							<div class="input-group"><label>Apellidos</label>
-							<input type="text" name="" id="surname" pattern=".{6,}"></div>
+							<input type="text" name="" id="surname"><span id="errApellido"></span></div>
 							<div class="input-group"><label>DNI</label>
-							<input type="text" name="" id="dni" placeholder="11111111-X" pattern="^\d{8}[a-zA-Z]$"></div>
+							<input type="text" name="" id="dni" placeholder="11111111-X"><span id="errDni"></span></div>
 							<div class="input-group"><label>Email</label>
-							<input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="yourMail@domain.es"></div>
+							<input type="email" id="email" placeholder="yourMail@domain.es"><span id="errMail"></span></div>
 							<div class="input-group"><label>Verifica tu email</label>
-							<input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="yourMail@domain.es"></div>
+							<input type="email" id="otro-email" placeholder="yourMail@domain.es"><span id="errOtroMail"></span></div>
 							<div class="input-group"><label>Procedencia</label>
-							<input type="text" id="location"></div>
+							<input type="text" placeholder="IES, universidad, empresa..." id="location"><span id="errLocation"></span></div>
 							<button>Enviar</button>
 							</form></div>';
 				break;
