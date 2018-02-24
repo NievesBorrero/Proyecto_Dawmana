@@ -54,6 +54,8 @@ section
 		height: auto
 		display: block
 
+#form-login
+	width: 50%
 form
 	padding: 0px 20px 10px
 	background: #fff
@@ -62,7 +64,8 @@ form
 	font-size: 0.9rem
 	margin: 0 auto
 	width: 70%
-	input[type="text"], input[type="email"]
+	text-align: center		
+	input[type="text"], input[type="email"], input[type="password"]
 		width: 60%
 		text-align: center
 		outline: none
@@ -74,6 +77,21 @@ form
 		display: block
 		&:focus
 			border-bottom: 3px solid $headerColor
+	.radio-group 
+		margin: 0 auto
+		text-align: center
+		margin-top: 20px
+		label
+			margin-left: 10px
+			display: inline
+		span 
+			margin-top: 25px
+	textarea
+		height: 150px
+		width: 400px
+		padding: 5px
+	.label-margin
+		margin-bottom: 40px
 	button
 		padding: 5px 20px
 		color: $headerColor
@@ -108,6 +126,9 @@ form
 .input-group
 	line-height: 0px
 	margin-bottom: 40px
+
+#dialog
+	display: none
 
 
 footer

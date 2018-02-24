@@ -1,0 +1,47 @@
+<head>	   	
+	<script src="./js/form.js" type="text/javascript" charset="utf-8"></script>
+</head>
+	<div id="dialog" title="¡Bien!">
+  	<p> Enhorabuena ¡Ya estás registrado como ponente!</p>
+  	</div>
+	<div class="card">
+	<form id="form-ponente">
+		<h4>Registro de ponentes</h4>
+		<div class="input-group">
+			<label>Nombre</label>
+			<input type="text" name="" id="name">
+			<span id="errNombre"></span>
+		</div>
+		<div class="input-group">
+			<label>Apellidos</label>
+			<input type="text" name="" id="surname">
+			<span id="errApellido"></span>
+		</div>
+		<div class="input-group">
+			<label>DNI</label>
+			<input type="text" name="" id="dni" placeholder="11111111-X">
+			<span id="errDni"></span>
+		</div>
+		<div class="input-group">
+			<label>Procedencia</label>
+			<input type="text" placeholder="Empresa/organismo de procedencia" id="location">
+			<span id="errLocation"></span>
+		</div>
+		<div class="input-group">
+			<label>Posibilidad de patrocinio</label>
+			<div class="radio-group">
+			<label>Sí<input type="radio" id="patrocinio" name="patrocinio"></label>
+			<label>No<input type="radio" id="patrocinio-no" name="patrocinio"></label><span id="errRb"></span>
+			</div>
+		</div>
+		<div class="input-group">
+			<label>Días preferibles</label>
+			<input type="text" id="datepicker">
+		</div>
+		<div class="input-group">
+			<label class=label-margin>Observaciones</label>
+			<textarea></textarea>
+		</div>		
+		<button>Enviar</button>
+	</form>
+	</div>
