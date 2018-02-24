@@ -2,8 +2,7 @@
  * Funcionalidad de formularios de registro de ponentes.
  * @author: Nieves Borrero
  */
-{
-	
+{	
 	let $idForm;
 	let $dialog;
 	// inputs
@@ -63,7 +62,9 @@
 	let comprobarProcedencia = function(cadena){
 		$spanLocation.html(tester.testProcedencia(cadena));
 	}
-
+	/**
+	 * Comprueba si algún radio buttom ha sido marcado
+	 */
 	let checkRadio = () => {
 		let error = "";
 		$rb.each(function(){
@@ -74,7 +75,6 @@
 		});
 		$spanRb.html(error);
 	}
-
 	/**
 	 * Comprueba si el email es correcto y añade la cadena al span
 	 *
@@ -115,6 +115,17 @@
 		});
 	}
 	/**
+	 * Crea un Datepicker 
+	 */
+	let createDatePicker = function(){
+		$( "#datepicker" ).datepicker({ 
+			dateFormat: 'dd-mm-yy',
+			minDate: new Date(2018, 1 - 1, 25),
+			maxDate: new Date(2018, 1 - 1, 29),
+			showAnim: "drop"
+		});
+	}
+	/**
      * Abre un diálogo
      */
     let openDialog = function(){
@@ -128,7 +139,11 @@
       			}
    			 });
     }   
-
+    /**
+     * Comprueba todos los inputs del formulario 
+     *
+     * @param event
+     */
 	let checkAll = function (event){
 		event.preventDefault();		
 		comprobarNombre(extractValue($nombre));
@@ -152,6 +167,7 @@
 	let init = function(){
 		let $btnEnviar = $("button");
 		$dialog = $("#dialog").dialog({autoOpen: false});	
+		// id del formulario para comprobación de todos los inputs del mismo
 		$idForm = $("form").prop("id");
 		// Inicializamos los span
 		$spanNombre = $("#errNombre");
@@ -172,12 +188,7 @@
 		$email = $('#email');
 		$otroEmail = $('#otro-email');
 
-		$( "#datepicker" ).datepicker({ 
-			dateFormat: 'dd-mm-yy',
-			minDate: new Date(2018, 1 - 1, 25),
-			maxDate: new Date(2018, 1 - 1, 29),
-			showAnim: "drop"
-		});
+		createDatePicker();
 		// Eventos asociados
 		$nombre.bind("blur",function(){
 			comprobarNombre(extractValue($nombre));
