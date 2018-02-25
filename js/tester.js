@@ -18,8 +18,8 @@
 			    email: [/^[\w-\.]+@([\w]{2,}\.)+([\w-]{2,})$/, 'El correo introducido no es válido'],
 			    procedencia:[/[\w]+/, 'Este campo no puede estar vacio'],
 			    user: [/[\w]{6,}/, '6 caracteres min.'],
-			    password:  [/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/, 
-			    "6 caracteres min., mayúsculas, minúsculas, números y signos de puntuación"]
+			    password:  [/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,}$/, 
+			    "No es una contraseña robusta"]
 			}
 			/**
 			 * Comprueba que el nombre introducido coincida con el patrón

@@ -27,7 +27,6 @@
 	 * @return  {String}  cadena que contiene ese input
 	 */
 	let extractValue = function(campo){
-		console.log(campo);
 		return campo.val().trim();
 	}
 	/**
@@ -91,7 +90,6 @@
 	let comprobarOtroEmail = function(cadena1,cadena2){
 		$spanOtroMail.html(tester.testOtroEmail(cadena1,cadena2));
 	}
-	
 	/**
 	 * Comprueba si hay errores
 	 *
@@ -150,22 +148,43 @@
 		comprobarApellidos(extractValue($apellido));
 		comprobarDni(extractValue($dni));		
 		comprobarProcedencia(extractValue($procedencia));		
-		if($idForm == "form-ponente")		
-			checkRadio();
-		else if($idForm == "form-asistente"){
-			comprobarEmail(extractValue($email));
-			comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
-		} 			
+		if($idForm == "form-ponente") {
+				checkRadio();
+		}
+		else{
+				comprobarEmail(extractValue($email));
+				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+		}
+
 		if(!hayError()){
 			limpiar();
 			openDialog();
+		}
+	}
+
+	/**
+	 * Inicializa sólo el tipo de formulario en el que nos encontremos
+	 */
+	let inicializarForm = function(){
+		if($idForm == "form-asistente"){
+			$email = $('#email');
+			$otroEmail = $('#otro-email');
+			$spanOtroMail = $('#errOtroMail');		
+			$email.bind("blur",function(){
+				comprobarEmail(extractValue($email));
+			});
+			$otroEmail.bind("blur",function(){
+				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+			});
+		}else{				
+			$rb = $(":radio");		
+			$spanRb = $('#errRb');
 		}
 	}
 	/**
 	 * Inicializa las variables y el comportamiento
 	 */
 	let init = function(){
-		let $btnEnviar = $("button");
 		$dialog = $("#dialog").dialog({autoOpen: false});	
 		// id del formulario para comprobación de todos los inputs del mismo
 		$idForm = $("form").prop("id");
@@ -174,20 +193,15 @@
 		$spanApellido = $("#errApellido");
 		$spanDni = $("#errDni");
 		$spanMail = $("#errMail");
-		$spanOtroMail = $('#errOtroMail');
-		$spanLocation = $("#errLocation");
-		$spanRb = $('#errRb');
 		$spanUser = $('#errUser');
 		$spanPasswd = $("#errPasswd");
+		$spanLocation = $("#errLocation");	
 		// Inicializamos los inputs
 		$nombre = $('#name');
 		$apellido = $('#surname');
 		$dni = $('#dni');
-		$procedencia = $('#location');		
-		$rb = $(":radio");		
-		$email = $('#email');
-		$otroEmail = $('#otro-email');
-
+		$procedencia = $('#location');	
+		inicializarForm();
 		createDatePicker();
 		// Eventos asociados
 		$nombre.bind("blur",function(){
@@ -199,17 +213,11 @@
 		$dni.bind("blur",function(){
 			comprobarDni(extractValue($dni));
 		});
-		$email.bind("blur",function(){
-			comprobarEmail(extractValue($email));
-		});
-		$otroEmail.bind("blur",function(){
-			comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
-		});
 		$procedencia.bind("blur",function(){
 			comprobarProcedencia(extractValue($procedencia));
 		});
 
-		$btnEnviar.click(checkAll);
+		$('button').click(checkAll);
 	}
 
 	$(init);
