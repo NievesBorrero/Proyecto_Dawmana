@@ -79,9 +79,10 @@ form {
   margin-top: 20px;
   font-size: 0.9rem;
   margin: 0 auto;
+  margin-bottom: 20px;
   width: 70%;
   text-align: center; }
-  form input[type="text"], form input[type="email"], form input[type="password"] {
+  form input[type="text"], form input[type="email"], form input[type="password"], form input[type="number"] {
     width: 60%;
     text-align: center;
     outline: none;
@@ -91,7 +92,7 @@ form {
     border-bottom: 1px solid gray;
     margin: 0 auto;
     display: block; }
-    form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus {
+    form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus, form input[type="number"]:focus {
       border-bottom: 3px solid #3F51B5; }
   form .radio-group {
     margin: 0 auto;
@@ -108,15 +109,6 @@ form {
     padding: 5px; }
   form .label-margin {
     margin-bottom: 40px; }
-  form button {
-    padding: 5px 20px;
-    color: #3F51B5;
-    margin: 0 auto;
-    display: block; }
-    form button:hover {
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-      background-color: #3F51B5;
-      color: #FFF; }
   form label {
     color: #3F51B5;
     font-size: 16px;
@@ -137,6 +129,20 @@ form {
     display: block;
     text-align: center;
     margin-top: 15px; }
+
+button {
+  padding: 5px 20px;
+  color: #3F51B5;
+  margin: 0 auto;
+  display: block; }
+  button:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background-color: #3F51B5;
+    color: #FFF; }
+
+.add {
+  border-radius: 100px;
+  margin-top: 10px; }
 
 .input-group {
   line-height: 0px;

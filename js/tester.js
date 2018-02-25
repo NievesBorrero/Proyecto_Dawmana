@@ -19,7 +19,20 @@
 			    procedencia:[/[\w]+/, 'Este campo no puede estar vacio'],
 			    user: [/[\w]{6,}/, '6 caracteres min.'],
 			    password:  [/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,}$/, 
-			    "No es una contraseña robusta"]
+			    "No es una contraseña robusta"],
+			    url: [/^(http:\/\/)?www\.(\w)*\.(\w){2,3}/, ' Formatos válidos: www.web.es http://www.web.com'],
+			}
+			/**
+			 * Comprueba que la url introducida coincida con el patrón
+			 *
+			 * @param      {String}  texto 
+			 * @return     {String}  cadena vacia si es correcto, error si es incorrecto
+			 */
+			let testUrl = function (texto){
+				if(patrones.url[0].test(texto))
+					return '';
+				return patrones.url[1]; // Si no coincide, devuelve la cadena con el error
+				
 			}
 			/**
 			 * Comprueba que el nombre introducido coincida con el patrón
@@ -142,7 +155,8 @@
 		       testDni: testDni,
 		       testProcedencia: testProcedencia,
 		       testUser: testUser,
-		       testPasswd: testPasswd
+		       testPasswd: testPasswd,
+		       testUrl: testUrl
 	    	};
 	
 	})();

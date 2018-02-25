@@ -1,0 +1,44 @@
+<head>	   	
+	<script src="./js/actividad.js" type="text/javascript" charset="utf-8"></script>
+</head>
+	<div id="dialog" title="Hecho">
+  	<p>Actividad/es registrada/s</p>
+  	</div>
+	<div class="card">
+	<form id="form-actividad">
+		<h4>Registro de Actividades</h4>
+		<div class="input-group">
+			<label>Nombre</label>
+			<input type="text" name="" id="nombreActividad" placeholder="Nombre de la actividad">
+			<span id="errNombre"></span>
+		</div>
+		<div class="input-group">
+			<label>Url de imagen</label>
+			<input type="text" name="" id="url">
+			<span id="errUrl"></span>
+		</div>
+		<div class="input-group" id="addPon">
+			<label>Material para ponente</label>
+			<input type="text" name="" placeholder="Proyector, Conexión WIFI, Conexión Ethernet...">
+			<!--<button id="addMatPonente" class="add"><b>+</b></button>-->
+		</div>
+		<div class="input-group">
+			<label>Material para asistentes</label>
+			<input type="text" name="" placeholder="Equipo, Windows/Linux, Eclipse, Navegador...">
+			<!--<button id="addMatAsistente" class="add"><b>+</b></button>-->
+		</div>
+		<div class="input-group" id="addAs">
+		<label>nº recomendado de asistentes</label><input type="number">
+		</div>
+		<div class="input-group">
+			<label class=label-margin>Descripción breve</label>
+			<textarea id="desc"></textarea><span id="errDesc"></span>
+		</div>	
+		<div class="input-group">
+			<label class=label-margin>Descripción extensa</label>
+			<textarea></textarea>
+		</div>		
+		<button class="addActivity">Proponer más</button>	
+	</form>
+	<button class="enviar">Enviar</button>
+	</div>

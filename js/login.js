@@ -87,7 +87,7 @@
 		$passwd.bind("blur",function(){
 			comprobarPasswd(extractValue($passwd));
 		})
-		$('button').click(checkAll);
+		$('.enviar').click(checkAll);
 	}
 
 	$(init);

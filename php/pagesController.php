@@ -17,6 +17,9 @@
 			case 'registro':				
 				readfile('../html/registro.html');
 				break;
+			case 'actividad':				
+				readfile('../html/proponerActividad.html');
+				break;
 			case 'login':				
 				readfile('../html/login.html');
 				break;
