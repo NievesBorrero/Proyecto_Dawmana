@@ -166,29 +166,7 @@
 	 * Inicializa sólo el tipo de formulario en el que nos encontremos
 	 */
 	let inicializarForm = function(){
-		if($idForm == "form-asistente"){
-			$email = $('#email');
-			$otroEmail = $('#otro-email');
-			$spanOtroMail = $('#errOtroMail');		
-			$email.bind("blur",function(){
-				comprobarEmail(extractValue($email));
-			});
-			$otroEmail.bind("blur",function(){
-				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
-			});
-		}else{				
-			$rb = $(":radio");		
-			$spanRb = $('#errRb');
-		}
-	}
-	/**
-	 * Inicializa las variables y el comportamiento
-	 */
-	let init = function(){
-		$dialog = $("#dialog").dialog({autoOpen: false});	
-		// id del formulario para comprobación de todos los inputs del mismo
-		$idForm = $("form").prop("id");
-		// Inicializamos los span
+		// Inicializamos los span	
 		$spanNombre = $("#errNombre");
 		$spanApellido = $("#errApellido");
 		$spanDni = $("#errDni");
@@ -200,9 +178,8 @@
 		$nombre = $('#name');
 		$apellido = $('#surname');
 		$dni = $('#dni');
-		$procedencia = $('#location');	
-		inicializarForm();
-		createDatePicker();
+		$procedencia = $('#location');
+
 		// Eventos asociados
 		$nombre.bind("blur",function(){
 			comprobarNombre(extractValue($nombre));
@@ -217,6 +194,32 @@
 			comprobarProcedencia(extractValue($procedencia));
 		});
 
+
+		if($idForm == "form-asistente"){
+			$email = $('#email');
+			$otroEmail = $('#otro-email');
+			$spanOtroMail = $('#errOtroMail');		
+			$email.bind("blur",function(){
+				comprobarEmail(extractValue($email));
+			});
+			$otroEmail.bind("blur",function(){
+				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+			});
+
+		}else{				
+			$rb = $(":radio");		
+			$spanRb = $('#errRb');
+		}
+	}
+	/**
+	 * Inicializa las variables y el comportamiento
+	 */
+	let init = function(){
+		$dialog = $("#dialog").dialog({autoOpen: false});	
+		// id del formulario para comprobación de todos los inputs del mismo
+		$idForm = $("form").prop("id");
+		inicializarForm();
+		createDatePicker();
 		$('button').click(checkAll);
 	}
 

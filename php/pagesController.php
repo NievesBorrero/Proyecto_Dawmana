@@ -21,7 +21,7 @@
 				readfile('../html/login.html');
 				break;
 			default:
-				$content = '<div class="card"><img id="imageIndex" src="./images/cartel.jpg" alt=""></div>';
+				readfile('../html/main.html');
 				break;
 		}
 	echo $content;

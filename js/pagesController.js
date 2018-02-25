@@ -30,6 +30,7 @@
 	let init = function(){
 		let $pages = $(".selectPage");		
 		$container = $("#container");
+		$('#imageIndex').delay(1000).effect("shake").toggle("blind");
 		sendPage("inicio"); // Al iniciarse, solicitamos la página de inicio
 		$pages.click(getPage);
 	}
