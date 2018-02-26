@@ -1,5 +1,5 @@
 /**
- * Funcionalidad de formularios de registro de ponentes y asistentes.
+ * Funcionalidad de formularios.
  * @author: Nieves Borrero
  */
 {	
@@ -20,6 +20,17 @@
 	let	$spanLocation;
 	let $spanRb;
 	let	$spanMail;
+	// Variables de form - actividad
+	let $url;
+	let $spanUrl;
+	let $actividad;
+	let $desc;		
+	let $spanDesc;
+	// Variables de login
+	let $spanUser;
+	let $spanPasswd;	
+	let $user;
+	let	$passwd;
 	/**
 	 * Permite extraer un valor de un input, eliminando los espacios en blanco del principio y del final.
 	 *
@@ -62,6 +73,27 @@
 		$spanLocation.html(tester.testProcedencia(cadena));
 	}
 	/**
+	 * Comprueba si la url es correcta y añade la cadena al span
+	 *
+	 * @param {String}  cadena 
+	 */
+	let comprobarUrl = function(cadena){
+		$spanUrl.html(tester.testUrl(cadena));
+	}
+
+	/**
+	 * Comprueba si la cadena es correcta y añade una cadena al span
+	 *
+	 * @param {String}  cadena 
+	 * @param {jQuery Object}  span   
+	 */
+	let isEmpty = function(cadena, span){
+		if(cadena == "")
+			span.html('Este campo no puede estar vacio');
+		else
+			span.html('');
+	}
+	/**
 	 * Comprueba si algún radio buttom ha sido marcado
 	 */
 	let checkRadio = () => {
@@ -89,6 +121,35 @@
 	 */
 	let comprobarOtroEmail = function(cadena1,cadena2){
 		$spanOtroMail.html(tester.testOtroEmail(cadena1,cadena2));
+	}
+	/**
+	 * Comprueba si el usuario es correcto y añade la cadena al span
+	 *
+	 * @param {String}  cadena  
+	 */
+	let comprobarUser = function(cadena){
+		$spanUser.html(tester.testUser(cadena));
+	}
+	/**
+	 * Comprueba si la contraseña es correcta y añade la cadena al span
+	 *
+	 * @param {String}  cadena  
+	 */
+	let comprobarPasswd = function(cadena){
+		$spanPasswd.html(tester.testPasswd(cadena));
+	}
+	/**
+	* Comprueba si el usuario y contraseña coinciden con los registrados en un objeto json
+	*/
+	let comprobarRegistrados = function() {
+		$.getJSON('./js/json/users.json',function(data) {	
+			$.each(data['usuarios'],function(key,value){
+				if((value['usuario'] == extractValue($user)) && value['password'] == extractValue($passwd)){
+					window.location = "./index.html";
+				}
+			})
+		})
+		openDialog();
 	}
 	/**
 	 * Comprueba si hay errores
@@ -133,82 +194,142 @@
     			buttons: {
         			Ok: function() {
           				$( this ).dialog( "close" );
+          				// Si es login, el diálogo lo abrirá sólo cuando falle, por lo que no va al login
+          				if($idForm != "login")
+							window.location.href= "./";
        				 }
       			}
    			 });
-    }   
+    }
     /**
-     * Comprueba todos los inputs del formulario 
+     * Muestra otro formulario para otra actividad
+     * @param  event
+     */
+    let addActivity = (event)=>{
+		event.preventDefault();
+		$addActivity.remove();
+		$enviar.remove();
+		$.get('./html/proponerActividad.html',function(data){
+			$('section').append(data);
+		});
+	}
+    /**
+     * Comprueba todos los inputs según el formulario 
      *
      * @param event
      */
 	let checkAll = function (event){
-		event.preventDefault();		
-		comprobarNombre(extractValue($nombre));
-		comprobarApellidos(extractValue($apellido));
-		comprobarDni(extractValue($dni));		
-		comprobarProcedencia(extractValue($procedencia));		
-		if($idForm == "form-ponente") {
-				checkRadio();
-		}
-		else{
-				comprobarEmail(extractValue($email));
-				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
-		}
+		event.preventDefault();	
+		if($idForm == "login"){
+			comprobarUser(extractValue($user));
+			comprobarPasswd(extractValue($passwd));
+			comprobarRegistrados();
+		}else{
 
-		if(!hayError()){
-			limpiar();
-			openDialog();
-		}
+			if($idForm == "form-actividad"){
+					comprobarUrl(extractValue($url));
+					isEmpty(extractValue($actividad), $spanNombre);
+					isEmpty(extractValue($desc), $spanDesc);
+			} else{
+				// Común a form-ponente y form-asistente
+				comprobarNombre(extractValue($nombre));
+				comprobarApellidos(extractValue($apellido));
+				comprobarDni(extractValue($dni));		
+				comprobarProcedencia(extractValue($procedencia));		
+				if($idForm == "form-ponente") {
+					checkRadio();
+				}else{
+					comprobarEmail(extractValue($email));
+					comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+				}
+			}		
+				// Común a los 3 últimos
+				if(!hayError()){
+					limpiar();
+					openDialog();
+				}
+			}
 	}
-
 	/**
-	 * Inicializa sólo el tipo de formulario en el que nos encontremos
+	 * Inicializa variables y eventos sólo del tipo de formulario en el que nos encontremos
 	 */
 	let inicializarForm = function(){
-		// Inicializamos los span	
-		$spanNombre = $("#errNombre");
-		$spanApellido = $("#errApellido");
-		$spanDni = $("#errDni");
-		$spanMail = $("#errMail");
-		$spanUser = $('#errUser');
-		$spanPasswd = $("#errPasswd");
-		$spanLocation = $("#errLocation");	
-		// Inicializamos los inputs
-		$nombre = $('#name');
-		$apellido = $('#surname');
-		$dni = $('#dni');
-		$procedencia = $('#location');
+		if($idForm == "form-actividad"){
+			$actividad = $("#nombreActividad");
+			$desc = $("#desc");		
+			$spanDesc = $("#errDesc");
+			$spanNombre = $("#errNombre");
+			$url = $("#url");
+			$spanUrl = $("#errUrl");
+			$addActivity = $(".addActivity");
 
-		// Eventos asociados
-		$nombre.bind("blur",function(){
-			comprobarNombre(extractValue($nombre));
-		});
-		$apellido.bind("blur",function(){
-			comprobarApellidos(extractValue($apellido));
-		});
-		$dni.bind("blur",function(){
-			comprobarDni(extractValue($dni));
-		});
-		$procedencia.bind("blur",function(){
-			comprobarProcedencia(extractValue($procedencia));
-		});
-
-
-		if($idForm == "form-asistente"){
-			$email = $('#email');
-			$otroEmail = $('#otro-email');
-			$spanOtroMail = $('#errOtroMail');		
-			$email.bind("blur",function(){
-				comprobarEmail(extractValue($email));
+			$url.bind("blur",function(){
+					comprobarUrl(extractValue($url));
 			});
-			$otroEmail.bind("blur",function(){
-				comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+			$actividad.bind("blur",function(){
+					isEmpty(extractValue($actividad), $spanNombre);
 			});
+			$desc.bind("blur",function(){
+					isEmpty(extractValue($desc), $spanDesc);
+			});
+			$addActivity.click(addActivity);
 
-		}else{				
-			$rb = $(":radio");		
-			$spanRb = $('#errRb');
+		}else if($idForm =="login"){
+			$spanUser = $('#errUser');
+			$spanPasswd = $('#errPasswd');
+			$user = $('#user');
+			$passwd = $('#passwd');
+
+			$user.bind("blur",function(){
+				comprobarUser(extractValue($user))
+			})
+			$passwd.bind("blur",function(){
+				comprobarPasswd(extractValue($passwd));
+			})
+		}else{
+
+			// Inicializamos los span	
+			$spanNombre = $("#errNombre");
+			$spanApellido = $("#errApellido");
+			$spanDni = $("#errDni");
+			$spanMail = $("#errMail");
+			$spanUser = $('#errUser');
+			$spanPasswd = $("#errPasswd");
+			$spanLocation = $("#errLocation");	
+			// Inicializamos los inputs
+			$nombre = $('#name');
+			$apellido = $('#surname');
+			$dni = $('#dni');
+			$procedencia = $('#location');
+
+			// Eventos asociados
+			$nombre.bind("blur",function(){
+				comprobarNombre(extractValue($nombre));
+			});
+			$apellido.bind("blur",function(){
+				comprobarApellidos(extractValue($apellido));
+			});
+			$dni.bind("blur",function(){
+				comprobarDni(extractValue($dni));
+			});
+			$procedencia.bind("blur",function(){
+				comprobarProcedencia(extractValue($procedencia));
+			});
+			if($idForm == "form-asistente"){
+				$email = $('#email');
+				$otroEmail = $('#otro-email');
+				$spanOtroMail = $('#errOtroMail');		
+				$email.bind("blur",function(){
+					comprobarEmail(extractValue($email));
+				});
+				$otroEmail.bind("blur",function(){
+					comprobarOtroEmail(extractValue($otroEmail),extractValue($email));
+				});
+
+			}else{				
+				$rb = $(":radio");		
+				$spanRb = $('#errRb');
+			}
 		}
 	}
 	/**
@@ -218,9 +339,10 @@
 		$dialog = $("#dialog").dialog({autoOpen: false});	
 		// id del formulario para comprobación de todos los inputs del mismo
 		$idForm = $("form").prop("id");
+		$enviar = $('.enviar');
 		inicializarForm();
 		createDatePicker();
-		$('.enviar').click(checkAll);
+		$enviar.click(checkAll);
 	}
 
 	$(init);

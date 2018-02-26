@@ -1,15 +1,14 @@
 <?php
 	$page = $_POST['page'];
-	$content = "";
 		switch ($page) {
 			case 'actividades':
-				$content = '<div class="card">Actividades</div>';
+				echo'<div class="card">Actividades</div>';
 				break;
 			case 'ponentes':
-				$content = '<div class="card">Ponentes</div>';
+				echo '<div class="card">Ponentes</div>';
 				break;
 			case 'imagenes':
-				$content = '<div class="card">Imagenes</div>';
+				echo '<div class="card">Imagenes</div>';
 				break;
 			case 'asistencia':
 				readfile('../html/asistencia.html');
@@ -27,5 +26,4 @@
 				readfile('../html/main.html');
 				break;
 		}
-	echo $content;
 ?>
