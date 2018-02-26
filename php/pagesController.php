@@ -2,7 +2,7 @@
 	$page = $_POST['page'];
 		switch ($page) {
 			case 'actividades':
-				echo'<div class="card">Actividades</div>';
+				readfile('../html/actividades.html');
 				break;
 			case 'ponentes':
 				echo '<div class="card">Ponentes</div>';

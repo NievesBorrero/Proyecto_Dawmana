@@ -1,0 +1,50 @@
+{
+	"actividades":
+		{ 
+			"lunes" : [
+				{
+					"day": "lunes", 
+					"hora": "08:30", 
+					"titulo": "Sistemas de Control de versiones distribuidas", 
+					"ponente": "Nacho Álvarez", 
+					"empresa": "Redsys",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
+					"detalle" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva.",
+					"descripcion" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva. También se darán sus alternativas sobre interfaz gráfica y se comentarán las estrategias de mergemás efectivas."
+				},
+				{
+					"day": "lunes", 
+					"hora": "09:45", 
+					"titulo": "Servicios web con Python + web.py", 
+					"ponente": "Nacho Álvarez", 
+					"empresa": "Redsys",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
+					"detalle" : "Se repasará la descripción de servicios Web y tecnologías SOAP/REST",
+					"descripcion" :"Se repasará la descripción de servicios Web y tecnologías SOAP/REST. A continuación, se presenta el microframework web.py desarrollado por Aaron Swartz para la generación y despliegue de servicios Web."
+			}
+			],
+
+			"martes" : [
+				{
+					"day": "martes", 
+					"hora": "09:00", 
+					"titulo": "Geolocalización de usuarios sin GPS", 
+					"ponente": "Eduardo Sánchez Toril", 
+					"empresa": "IES Fidiana",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/Edu_Sanchez-e1504773381167.jpg",
+					"detalle" : "Geolozalizar usuarios sin GPS.",
+					"descripcion" : "Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso"
+				},
+				{
+					"day": "martes", 
+					"hora": "10:00", 
+					"titulo": "Introducción al análisis de binarios", 
+					"ponente": "Miguel A. Arroyo", 
+					"empresa": "STV Cloud",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/MiguelAngel_Arroyo-1-e1504773318775.jpg",
+					"detalle" : "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios",
+					"descripcion": "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios, uno de las áreas más complejas y potentes del cambo de la seguridad informática, indicando en qué campos de la seguridad es útil este conocimiento y se hará una demostración práctica con el análisis de varios binarios."
+				}
+			]
+		}
+}
