@@ -1,4 +1,4 @@
-
+{
 	let daySelect;
 	let $tab;
 	/**
@@ -35,7 +35,6 @@
 			$empresa = $('<span></span>').html(" ("+element.empresa+")");
 			$ponencia.append($titulo,$imagen,$descripcion,$hora,$ponente,$empresa);
 			$tab.append($ponencia);	
-
 			$ponencia.click(function(){
 				$(this).children('.descripcion').toggle();
 			});
@@ -49,7 +48,9 @@
 		$( "#tabs" ).tabs();
 		$options.click(getDay);
 		$tab = $('#tab');
+		sendDay('lunes');
 	}
 
 	$(init);
 
+}

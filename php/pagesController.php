@@ -5,7 +5,7 @@
 				readfile('../html/actividades.html');
 				break;
 			case 'ponentes':
-				echo '<div class="card">Ponentes</div>';
+				readfile('../html/ponentes.html');
 				break;
 			case 'imagenes':
 				echo '<div class="card">Imagenes</div>';

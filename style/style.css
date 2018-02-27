@@ -29,6 +29,7 @@ section {
   background-color: #ECF0F1;
   width: 100%; }
   section header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px; }
@@ -159,6 +160,17 @@ button {
   display: inline-block;
   width: 60%;
   margin-left: 50px; }
+
+#container-ponentes {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-around; }
+  #container-ponentes .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: #3F51B5; }
 
 footer {
   background-color: #3F51B5;

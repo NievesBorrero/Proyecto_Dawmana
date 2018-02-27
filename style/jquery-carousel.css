@@ -1,0 +1,77 @@
+carousel.is-initialized {
+  position: relative; }
+
+.is-initialized .carousel-frame {
+  overflow: hidden;
+  position: relative;
+  width: 300px; }
+
+.is-initialized .carousel-slider {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* Use GPU */
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+
+.is-initialized .carousel-slide {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+/* Prev / next navigation */
+.carousel-navs {
+  margin: 0.5em 0;
+  *zoom: 1; }
+  .carousel-navs:before, .carousel-navs:after {
+    content: " ";
+    display: table; }
+  .carousel-navs:after {
+    clear: both; }
+
+.carousel-nav {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  float: right;
+  font-size: 1em;
+  padding: 0; }
+  .carousel-nav:first-child {
+    float: left; }
+  .carousel-nav:hover, .carousel-nav:focus, .carousel-nav:active {
+    color: #cc3300; }
+  .carousel-nav[disabled] {
+    color: #999999;
+    cursor: default; }
+
+/* Counter ("slide x of y") */
+.carousel-counter {
+  margin: 0.5em 0; }
+
+/* Handles */
+.carousel-handles {
+  margin: 0.5em 0;
+  text-align: center; }
+
+.carousel-handle {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0 0.5em;
+  padding: 0; }
+  .carousel-handle:hover, .carousel-handle:focus, .carousel-handle:active, .carousel-handle.is-active {
+    color: #cc3300; }
+  .carousel-handle.is-active {
+    cursor: default; }
+  .carousel-handle[disabled] {
+color: #999999;
+    cursor: default; }

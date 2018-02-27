@@ -1,6 +1,6 @@
 {
 	"usuarios":[
-		{"usuario": "nieves", "password": "nieves123."},
-		{"usuario": "lourdes", "password": "lourdes123."}
+		{"usuario": "nieves", "password": "Nieves123!"},
+		{"usuario": "lourdes", "password": "Lourdes123!"}
 	]
 }
