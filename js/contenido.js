@@ -58,6 +58,13 @@
 	 * @param  data
 	 */
 	let mostrarActividades = function(data){
+		let $ponencia;
+		let $titulo;
+		let $hora;
+		let $imagen;
+		let $descripcion;
+		let $ponente;
+		let $empresa;
 		data.forEach( function(element, index) {
 			$ponencia = $('<div class="card cardPonencia"></div>').prop('title',element.detalle);
 			$titulo = $('<h2></h2>').html(element.titulo);
@@ -80,6 +87,10 @@
 	 */
 	let mostrarPonentes = function(data){
 		let aux = '';
+		let $div;
+		let $link;
+		let $imagen;
+		let $p;
 		data.forEach( function(element, index) {		
 			img = element.imagen.replace("\"","");
 			if(img != aux){ 
