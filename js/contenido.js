@@ -1,3 +1,6 @@
+/**
+* @author Nieves Borrero
+*/
 {
 	let $container;
 	let daySelect;
