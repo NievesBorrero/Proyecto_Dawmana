@@ -1,8 +1,23 @@
 {
-	let container;
+	let $container;
 	let daySelect;
 	let $tab;
 	let id;
+
+	/**
+	 * Sombrea el elemento asociado al pasar el ratón por encima.
+	 *
+	 * @return {Object} ese elemento modificado
+	 */
+	$.fn.shade = function(){
+		this.mouseover(function(){
+			$(this).css("box-shadow", "0 10px 20px rgba(0,0,0,0.19)");
+		});
+		this.mouseout(function(){
+			$(this).css("box-shadow","none");
+		})
+		return this;
+	}
 	/**
 	* Envia una solicitud y muestra la página recibida
 	*
@@ -33,7 +48,8 @@
 				mostrarActividades(data);break;
 			case "container-ponentes" :
 				mostrarPonentes(data);break;
-
+			default:
+				mostrarCarteles(data); break;
 		}
 	}
 	/**
@@ -78,6 +94,13 @@
 			}
 		});
 	}
+
+	let mostrarCarteles = function(data){
+		data.forEach( function(element, index) {
+			let $imagen = $('<img class="carteles">').prop("src", element).shade();
+			$container.append($imagen);
+		});
+	}
 	/**
 	 * Crea un carrrusel de imágenes
 	 */
@@ -113,7 +136,8 @@
 				send("./php/galeria.php");
 				break;
 			default:
-				// statements_def
+				$container = $('#container-carteles');
+				send("./php/carteles.php");
 				break;
 		}
 	}

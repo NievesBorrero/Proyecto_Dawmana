@@ -110,64 +110,177 @@
 				{
 					"day": "miercoles", 
 					"hora": "08:30", 
-					"titulo": "Sistemas de Control de versiones distribuidas", 
-					"ponente": "Nacho Álvarez", 
-					"empresa": "Redsys",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
-					"detalle" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva.",
-					"descripcion" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva. También se darán sus alternativas sobre interfaz gráfica y se comentarán las estrategias de mergemás efectivas."
+					"titulo": "Design IS + workshop", 
+					"ponente": "Claudia López", 
+					"empresa": "-",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/Claudia_Lopez-e1504770601540.jpg",
+					"detalle" : "Breves conceptos de diseño sobre color, fundamentos de diseño, composición, tipografía y tendencias 2018",
+					"descripcion" : "niciación a Illustrator CC (nivel básico) : herramientas, espacios de trabajo, documentos (exportar y tipos), gestión del color, tipografías…"
 				},
 				{
 					"day": "miercoles", 
 					"hora": "09:45", 
-					"titulo": "Servicios web con Python + web.py", 
-					"ponente": "Nacho Álvarez", 
-					"empresa": "Redsys",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
-					"detalle" : "Se repasará la descripción de servicios Web y tecnologías SOAP/REST",
-					"descripcion" :"Se repasará la descripción de servicios Web y tecnologías SOAP/REST. A continuación, se presenta el microframework web.py desarrollado por Aaron Swartz para la generación y despliegue de servicios Web."
+					"titulo": "CTF", 
+					"ponente": "Rafa Sojo", 
+					"empresa": "Estudiante",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaSojo_400x400.jpg",
+					"detalle" : "Capture the Flag",
+					"descripcion" :"Nuestros alumnos competirán en grupos en un CTF organizado por Rafa Sojo. ¿Quién Ganará?"
 			},
 			{
 					"day": "miercoles", 
 					"hora": "08:30", 
-					"titulo": "WooCommerce: crea tu propia tienda online", 
-					"ponente": "Fco Javier Carazo", 
-					"empresa": "Codection",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FcoJavierCarazo_400x400.jpeg",
-					"detalle" : " el WooCommerce es el estándar de facto para crear tiendas online a día de hoy.",
-					"descripcion" : "Sus ventajas son muchas, pero hay dos que destacan, la 1ª de ellas es que usa WordPress. La 2ª es que es realmente fácil de instalar, de mantener y de administrar"
-				},
-				{
-					"day": "miercoles", 
-					"hora": "08:30", 
-					"titulo": "Envenenamiento DNS", 
-					"ponente": "Rafa Delgado", 
+					"titulo": "Web scraping like a ninja", 
+					"ponente": "Rafa Sojo", 
 					"empresa": "Estudiante",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaDelgado_400x400.jpg",
-					"detalle" : "Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad",
-					"descripcion" : "Es una situación creada de manera maliciosa que provee datos manipulados de un servidor DNS falso, con el objetivo de robar información al usuario. Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad"
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaSojo_400x400.jpg",
+					"detalle" : "Qué es web scraping y técnicas y herramientas de uso",
+					"descripcion" : "etc"
 				},
 				{
 					"day": "miercoles", 
 					"hora": "08:30", 
-					"titulo": "Angular Material", 
-					"ponente": "Rafa Mellado y Dani Gestino", 
-					"empresa": "Estudiantes",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaMellado_DanielGestino.jpg",
-					"detalle" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material",
-					"descripcion" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material en el que explicaremos las características más importantes de angular para los principiantes y haremos un taller guiado con una búsqueda “en caliente” de diferentes elementos"
+					"titulo": "Coworking", 
+					"ponente": "Rafael Rodríguez", 
+					"empresa": "LaZona Coworking",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Lazona400x400.png",
+					"detalle" : "Los espacios de trabajo colaborativo o coworkings son una alternativa que permite a trabajadores autónomos y pequeñas empresas compartir en su día a día ideas, proyectos, contactos…",
+					"descripcion" : "a la vez que reducen y flexibilizan los costes fijos que supone mantener una oficina propia."
 				},
 				{
 					"day": "miercoles", 
 					"hora": "08:30", 
-					"titulo": "Tweepy. Cuando Python escucha lo que dice un pajarito", 
-					"ponente": "Nieves Borrero y Pablo León", 
+					"titulo": "ChatBots", 
+					"ponente": "Javier Aguirre", 
+					"empresa": "Repli.ai",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/JavierAguirre_400x400.jpg",
+					"detalle" : "Chatbots",
+					"descripcion" : "Todo el mundo habla de ellos, pero qué son y por dónde empezar? Veremos de dónde vienen los chatbots y cómo empezar a implementar uno"
+				},
+				{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "Taller sobre bots 102", 
+					"ponente": "Cristina Santamarina", 
+					"empresa": "The Neon Project",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/CristinaSantamarina_400x400.jpg",
+					"detalle" : "Aprenderemos a diseñar un chatbot con Chatfuel y Dialogflow",
+					"descripcion" : "etc"
+				}
+			],
+		"jueves" : [
+				{
+					"day": "jueves", 
+					"hora": "08:30", 
+					"titulo": "Como construir un modelo predictivo de machine learning", 
+					"ponente": "Raúl Valentín", 
+					"empresa": "Hospital S. Juan de Dios",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/09/RaulValentin.jpg",
+					"detalle" : "Entre todos construiremos un modelo predictivo",
+					"descripcion" : "Un grupo de alumnos será nuestro conjunto de datos de entrenamiento con los que entrenaremos el modelo. Una vez construido el modelo otro grupo de alumnos lo testeará y determinaremos su rendimiento."
+				},
+				{
+					"day": "jueves", 
+					"hora": "09:45", 
+					"titulo": "Producción en Realidad Virtual", 
+					"ponente": "Manuel Jimenez", 
+					"empresa": "-",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/ManuelJimenez_400x400_2018.jpg",
+					"detalle" : "Taller introductorio al uso de CoSpaces",
+					"descripcion" :"una herramienta web que permite de forma sencilla y directa producir escenas inmersivas e interactivas"
+			},
+			{
+					"day": "jueves", 
+					"hora": "08:30", 
+					"titulo": "Cloud y contenerización con Docker", 
+					"ponente": "Rafael Gómez", 
+					"empresa": "Innovation Group",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Innovation_Group400x400.png",
+					"detalle" : "Contenedores Docker",
+					"descripcion" : "Charla sobre Cloud, Docker, Puppet y Devops"
+				},
+				{
+					"day": "jueves", 
+					"hora": "08:30", 
+					"titulo": "Crea tu propia nube", 
+					"ponente": "Cristina Treviño Pepe Molinero", 
 					"empresa": "Estudiantes",
-					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/NievesBorrero_PabloLeon.jpg",
-					"detalle" : "Una charla sobre las posibilidades que nos ofrece Tweepy",
-					"descripcion" : "una librería de Python que nos permite trabajar de forma sencilla con la API de twitter"
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Cristina_Triviño_Pepe_Molinero.jpg",
+					"detalle" : "Implementación y explicación de servicio Web y de Nextcloud en una raspberry pi 3",
+					"descripcion" : "etc"
+				},
+				{
+					"day": "jueves", 
+					"hora": "08:30", 
+					"titulo": "Testing en el marco de trabajo scrum", 
+					"ponente": "Alvaro Mesa , Raul Zarza y Antonio Arteche", 
+					"empresa": "Innovation Group",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Innovation_Group400x400.png",
+					"detalle" : "Charla sobre las fases de vida de desarrollo software en el marco de Scrum",
+					"descripcion" : "y las actividades que un tester lleva a cabo en cada una de ellas para asegurar la calidad del software"
+				}
+			],
+		"viernes" : [
+				{
+					"day": "viernes", 
+					"hora": "08:30", 
+					"titulo": "Criptomonedas y Altcoin", 
+					"ponente": "David Fernández Gómez, Antonio David Ventura Serrano y Francisco Llamas Nuflo", 
+					"empresa": "estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/LlamasFran_FernandezDavid_Sysmana2018.jpg",
+					"detalle" : "Criptomonedas",
+					"descripcion" : "Introducción al mundo de las criptomonedas. Herramientas, utilidades, monederos, minería."
+				},
+				{
+					"day": "viernes", 
+					"hora": "09:45", 
+					"titulo": "Iniciación al desarrollo de servicios REST", 
+					"ponente": "Juan Antonio Romero", 
+					"empresa": "Sopinet",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/JuanAntonioRomero2018_400x400.jpg",
+					"detalle" : "Introducción al desarrollo de una REST API",
+					"descripcion" :"Veremos los motivos para desarrollar aplicaciones con esta arquitectura y la teoría para llevarlo a cabo, tratando de seguir las buenas prácticas."
+			},
+			{
+					"day": "viernes", 
+					"hora": "08:30", 
+					"titulo": "Mas allá de Agile", 
+					"ponente": "Fernando Hidalgo", 
+					"empresa": "Sopinet",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FernandoHidalgo2018_400x400.jpg",
+					"detalle" : "Cómo se estructura Sopinet Software y cómo se implementa nuestra ambiciosa filosofía, basada en tres pilares Agile: Transparencia, Sin miedo y Valor humano",
+					"descripcion" : "En ella, de: Nuestra política salarial, transparente y establecida a través de fórmulas Nuestra transparencia y métricas implementada con nuestras bombillas inteligentes etc…"
+				},
+				{
+					"day": "viernes", 
+					"hora": "08:30", 
+					"titulo": "¿Igualdad de género en el mundo tecnológico? ", 
+					"ponente": "Ana María Cuenca  María Moreno  Nieves Borrero Soledad Cruz", 
+					"empresa": "Estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Brecha_digital_sysmana2018.jpg",
+					"detalle" : "La Brecha Digital",
+					"descripcion" : "¿Existe la desigualdad de género en el mundo tecnológico o, por el contrario, la tecnología reduce la desigualdad entre hombres y mujeres?"
+				},
+				{
+					"day": "viernes", 
+					"hora": "08:30", 
+					"titulo": "¿Soy vulnerable?", 
+					"ponente": "Lucía Expósito", 
+					"empresa": "SVT Cloud",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/LuciaExposito2018_400x400.jpg",
+					"detalle" : "Charla sobre la vulnerabilidad móvil a través de bluetooth por blueborn",
+					"descripcion" : "etc"
+				},
+				{
+					"day": "viernes", 
+					"hora": "08:30", 
+					"titulo": "Horus is coming.. o casi", 
+					"ponente": "Manu Hidalgo", 
+					"empresa": "SVT Cloud",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Manuel_Hidalgo.png",
+					"detalle" : "Uso de nuevas tecnologías (elk, programas open source y scripting) para monitorizar en tiempo real equipos y sus servicios.",
+					"descripcion" : "y más cosas de Manu"
 				}
 			]
-
 		}
 }

@@ -8,7 +8,7 @@
 				readfile('../html/ponentes.html');
 				break;
 			case 'imagenes':
-				echo '<div class="card">Imagenes</div>';
+				readfile('../html/carteles.html');
 				break;
 			case 'asistencia':
 				readfile('../html/asistencia.html');

@@ -29,7 +29,7 @@ section {
   background-color: #ECF0F1;
   width: 100%; }
   section header {
-    width: 100%;
+    width: 97%;
     display: flex;
     justify-content: space-between;
     padding: 20px; }
@@ -200,5 +200,10 @@ footer {
   #patrocinios .rect {
     width: 220px;
     height: 100px; }
+
+.carteles {
+  width: 60%;
+  display: block;
+  margin: 0px auto; }
 
 /*# sourceMappingURL=style.css.map */
