@@ -22,6 +22,9 @@
 			case 'login':				
 				readfile('../html/login.html');
 				break;
+			case 'logueado':				
+				readfile('../html/logueado.html');
+				break;
 			default:
 				readfile('../html/main.html');
 				break;

@@ -158,10 +158,16 @@ button
 	margin: 10px
 	height: 100%
 
-.descripcion
-	display: inline-block
-	width: 60%
-	margin-left: 50px
+.title
+	text-align: center
+	color: $headerColor
+
+#container-actividades
+	.card 
+		width: 50%
+		margin: auto
+		margin-top: 20px
+		text-align: center
 
 #container-ponentes
 	display: grid
@@ -169,10 +175,15 @@ button
 	justify-content: space-around
 	.card
 		display: flex
+		border-radius: 10px
 		flex-direction: column 
 		justify-content: space-between
 		text-align: center
 		color: $headerColor
+		img 
+			border-radius: 10px
+			width: 100%
+
 footer
 	background-color: $headerColor
 	color: #FFF	

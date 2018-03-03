@@ -236,12 +236,10 @@
 	 */
 	let checkRadio = () => {
 		let error = "";
-		$rb.each(function(){
-			if(this.checked==false)
-				error = "Marca la posibilidad de patrocinio";
-			else
-				error="";				
-		});
+		if(!$rb.is(":checked"))
+			error = "Marca la posibilidad de patrocinio";
+		else
+			error="";	
 		$spanRb.html(error);
 	}
 	/**
@@ -287,7 +285,7 @@
 			$.each(data['usuarios'],function(key,value){
 				if(value['usuario'] == extractValue(user) && value['password'] == extractValue(pass)){
 					validado = true;
-					sendPage("actividad");
+					sendPage("inicio");
 				}
 			})
 		if(!validado){
@@ -320,11 +318,13 @@
 	/**
 	 * Crea un Datepicker 
 	 */
-	let createDatePicker = function(){
-		$( "#datepicker" ).datepicker({ 
+	let createDatePicker = function(datepicker){
+		datepicker.datepicker({ 
 			dateFormat: 'dd-mm-yy',
 			minDate: new Date(2018, 1 - 1, 25),
 			maxDate: new Date(2018, 1 - 1, 29),
+			firstDay: 1,
+			showOtherMonths: true,
 			showAnim: "drop"
 		});
 	}
@@ -468,9 +468,10 @@
 			$spanMail = $("#errMail");
 			$spanOtroMail = $('#errOtroMail');
 		}else{			
-			createDatePicker();	
+			createDatePicker($(".datepicker"));	
 			$rb = $(":radio");		
 			$spanRb = $('#errRb');
+			$("#patrocinio-no").blur(checkRadio);
 		}
 	}
 	/**

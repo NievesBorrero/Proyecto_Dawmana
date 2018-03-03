@@ -21,7 +21,47 @@
 					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
 					"detalle" : "Se repasará la descripción de servicios Web y tecnologías SOAP/REST",
 					"descripcion" :"Se repasará la descripción de servicios Web y tecnologías SOAP/REST. A continuación, se presenta el microframework web.py desarrollado por Aaron Swartz para la generación y despliegue de servicios Web."
-			}
+			},
+			{
+					"day": "lunes", 
+					"hora": "08:30", 
+					"titulo": "WooCommerce: crea tu propia tienda online", 
+					"ponente": "Fco Javier Carazo", 
+					"empresa": "Codection",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FcoJavierCarazo_400x400.jpeg",
+					"detalle" : " el WooCommerce es el estándar de facto para crear tiendas online a día de hoy.",
+					"descripcion" : "Sus ventajas son muchas, pero hay dos que destacan, la 1ª de ellas es que usa WordPress. La 2ª es que es realmente fácil de instalar, de mantener y de administrar"
+				},
+				{
+					"day": "lunes", 
+					"hora": "08:30", 
+					"titulo": "Envenenamiento DNS", 
+					"ponente": "Rafa Delgado", 
+					"empresa": "Estudiante",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaDelgado_400x400.jpg",
+					"detalle" : "Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad",
+					"descripcion" : "Es una situación creada de manera maliciosa que provee datos manipulados de un servidor DNS falso, con el objetivo de robar información al usuario. Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad"
+				},
+				{
+					"day": "lunes", 
+					"hora": "08:30", 
+					"titulo": "Angular Material", 
+					"ponente": "Rafa Mellado y Dani Gestino", 
+					"empresa": "Estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaMellado_DanielGestino.jpg",
+					"detalle" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material",
+					"descripcion" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material en el que explicaremos las características más importantes de angular para los principiantes y haremos un taller guiado con una búsqueda “en caliente” de diferentes elementos"
+				},
+				{
+					"day": "lunes", 
+					"hora": "08:30", 
+					"titulo": "Tweepy. Cuando Python escucha lo que dice un pajarito", 
+					"ponente": "Nieves Borrero y Pablo León", 
+					"empresa": "Estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/NievesBorrero_PabloLeon.jpg",
+					"detalle" : "Una charla sobre las posibilidades que nos ofrece Tweepy",
+					"descripcion" : "una librería de Python que nos permite trabajar de forma sencilla con la API de twitter"
+				}
 			],
 
 			"martes" : [
@@ -44,7 +84,90 @@
 					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/MiguelAngel_Arroyo-1-e1504773318775.jpg",
 					"detalle" : "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios",
 					"descripcion": "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios, uno de las áreas más complejas y potentes del cambo de la seguridad informática, indicando en qué campos de la seguridad es útil este conocimiento y se hará una demostración práctica con el análisis de varios binarios."
+				},
+					{
+					"day": "martes", 
+					"hora": "09:00", 
+					"titulo": "Digital MKG: herramientas para analizar webs", 
+					"ponente": "JL García-Morato y José Huertas", 
+					"empresa": "DOBUSS",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/dobuss-e1504774150983.jpeg",
+					"detalle" : "Repaso de herramientas usadas en el Marketing Digital para analizar webs",
+					"descripcion" : "Repaso de herramientas usadas en el Marketing Digital para analizar webs"
+				},
+					{
+					"day": "martes", 
+					"hora": "09:00", 
+					"titulo": "Deep Learning", 
+					"ponente": "Nicolás García Pedrajas", 
+					"empresa": "Universidad de Córdoba",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/10nicolasgarcia-150x150-1.jpg",
+					"detalle" : "Aprendizaje automático basados en asimilar representaciones de datos",
+					"descripcion" : "En este paradigma los algoritmos son capaces de aprender sin intervención humana previa, sacando ellos mismos las conclusiones acerca de la semántica embebida en los datos."
+				}
+			],
+			"miercoles" : [
+				{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "Sistemas de Control de versiones distribuidas", 
+					"ponente": "Nacho Álvarez", 
+					"empresa": "Redsys",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
+					"detalle" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva.",
+					"descripcion" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva. También se darán sus alternativas sobre interfaz gráfica y se comentarán las estrategias de mergemás efectivas."
+				},
+				{
+					"day": "miercoles", 
+					"hora": "09:45", 
+					"titulo": "Servicios web con Python + web.py", 
+					"ponente": "Nacho Álvarez", 
+					"empresa": "Redsys",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
+					"detalle" : "Se repasará la descripción de servicios Web y tecnologías SOAP/REST",
+					"descripcion" :"Se repasará la descripción de servicios Web y tecnologías SOAP/REST. A continuación, se presenta el microframework web.py desarrollado por Aaron Swartz para la generación y despliegue de servicios Web."
+			},
+			{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "WooCommerce: crea tu propia tienda online", 
+					"ponente": "Fco Javier Carazo", 
+					"empresa": "Codection",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FcoJavierCarazo_400x400.jpeg",
+					"detalle" : " el WooCommerce es el estándar de facto para crear tiendas online a día de hoy.",
+					"descripcion" : "Sus ventajas son muchas, pero hay dos que destacan, la 1ª de ellas es que usa WordPress. La 2ª es que es realmente fácil de instalar, de mantener y de administrar"
+				},
+				{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "Envenenamiento DNS", 
+					"ponente": "Rafa Delgado", 
+					"empresa": "Estudiante",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaDelgado_400x400.jpg",
+					"detalle" : "Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad",
+					"descripcion" : "Es una situación creada de manera maliciosa que provee datos manipulados de un servidor DNS falso, con el objetivo de robar información al usuario. Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad"
+				},
+				{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "Angular Material", 
+					"ponente": "Rafa Mellado y Dani Gestino", 
+					"empresa": "Estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaMellado_DanielGestino.jpg",
+					"detalle" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material",
+					"descripcion" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material en el que explicaremos las características más importantes de angular para los principiantes y haremos un taller guiado con una búsqueda “en caliente” de diferentes elementos"
+				},
+				{
+					"day": "miercoles", 
+					"hora": "08:30", 
+					"titulo": "Tweepy. Cuando Python escucha lo que dice un pajarito", 
+					"ponente": "Nieves Borrero y Pablo León", 
+					"empresa": "Estudiantes",
+					"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/NievesBorrero_PabloLeon.jpg",
+					"detalle" : "Una charla sobre las posibilidades que nos ofrece Tweepy",
+					"descripcion" : "una librería de Python que nos permite trabajar de forma sencilla con la API de twitter"
 				}
 			]
+
 		}
 }
