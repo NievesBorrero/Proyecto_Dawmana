@@ -321,10 +321,14 @@
 	let createDatePicker = function(datepicker){
 		datepicker.datepicker({ 
 			dateFormat: 'dd-mm-yy',
-			minDate: new Date(2018, 1 - 1, 25),
-			maxDate: new Date(2018, 1 - 1, 29),
+			minDate: new Date(2018, 1 - 1, 29),
+			maxDate: new Date(2018, 2 - 1, 2),
 			firstDay: 1,
-			showOtherMonths: true,
+			monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+			dayNamesMin: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+			monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			//changeMonth: true,
+			numberOfMonths: 2,
 			showAnim: "drop"
 		});
 	}
